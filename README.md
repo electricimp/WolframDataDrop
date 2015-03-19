@@ -9,11 +9,14 @@ This library wraps the [Wolfram Data Drop](www.wolfram.com/datadrop/) API. Wolfr
 To instantiate a new Wolfram Data Drop object, you will need the *binId* of your data drop bin to pass into the constructor:
 
 ```squirrel
-bin <- WolframDataDrop(binId);
+bin <- WolframDataDrop(binId)
 ```
 
-## bin.sendEvent(data, [callback])
-The **sendEvent** method adds a new datapoint to your bin. If a callback is supplied, the request will be made asyncronously, and the callback will be executed upon completion. If no callback is supplied, the request will be made syncronously, and the method will return an object with two fields: err, and data. Examples of both can be seen below:
+## bin.sendEvent(*data, [callback]*)
+
+The **sendEvent** method adds a new datapoint to your bin. If a callback function is supplied, the request will be made asynchronously and the callback will be executed upon completion. If no callback is supplied, the request will be made synchronously, and the method will return a Squirrel table with three fields: *statuscode*, *headers* and *body*. The *body* is itself a table; it has two fields: *err* and *data*.
+
+Examples of both uses of this method can be seen below:
 
 ```squirrel
 // Asynchronous Request
