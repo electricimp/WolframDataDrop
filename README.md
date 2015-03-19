@@ -14,7 +14,7 @@ bin <- WolframDataDrop(binId)
 
 ### Class Methods
 
-## bin.sendEvent(*data, [callback]*)
+### bin.sendEvent(*data, [callback]*)
 
 The **sendEvent** method adds a new datapoint to your bin. If a callback function is supplied, the request will be made asynchronously and the callback will be executed upon completion. If no callback is supplied, the request will be made synchronously, and the method will return a Squirrel table with three fields: *statuscode*, *headers* and *body*. The *body* is itself a table; it has two fields: *err* and *data*.
 
