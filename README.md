@@ -2,6 +2,8 @@
 
 This library wraps the [Wolfram Data Drop](www.wolfram.com/datadrop/) API. Wolfram Data Drop is an open service that makes it easy to accumulate data of any kind, from anywhere—setting it up for immediate computation, visualization, analysis, querying, or other operations.
 
+**To add this library to your project, add** `#require "WolframDataDrop.class.nut:1.0.0"` **to the top of your agent code**
+
 ## Class Usage
 
 ### Constructor
